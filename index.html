@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library App</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style type="text/tailwindcss">
         @layer components {
@@ -14,37 +15,35 @@
                 @apply px-4 py-2 rounded bg-gray-100 outline-none w-full
             }
         }
-    </style>
 
+    </style>
 </head>
+
 <body class="bg-indigo-800 p-10">
     <div class="bg-white p-5 rounded max-w-xl mx-auto">
         <h4 class="font-semibold text-xl">Book Library</h4>
-    
-    <form name="bookForm" class="space-y-3 mt-3">
-        <input type="text" id="bookTitle" placeholder="Book Title" class="input" required>
-        <input type="text" id="bookAuthor" placeholder="Book Author" class="input" required>
-        <button type="submit" class="px-3 py-1 bg-orange-500 rounded uppercase font-semibold text-sm text-white">Save</button>
-    </form>
+
+        <form name="bookForm" class="space-y-3 mt-3">
+            <input type="text" id="bookTitle" placeholder="Book Title" class="input" required>
+            <input type="text" id="bookAuthor" placeholder="Book Author" class="input" required>
+            <button type="submit"
+                class="px-3 py-1 bg-orange-500 rounded uppercase font-semibold text-sm text-white">Save </button>
+        </form>
     </div>
 
+    <!-- Added books section -->
     <section class="bg-white p-5 rounded max-w-xl mx-auto mt-5">
-        <h4 class="font-semibold text-xl">Added Books</h4>
+        <h4 class="font-semibold text-xl">Added Books (<span id="bookCount">0</span>)</h4>
 
-        <ul class="mt-3">
-            <li class="p-3 bg-orange-100 rounded ">
-                <div>Book name by Author</div>
-                <div>
-                    <button class="px-2  py-1 bg-green-500 text-sm rounded text-white">Mark as Read</button>
-                    <button class="px-2  py-1 bg-red-500 text-sm rounded text-white">Remove</button>
-                </div>
-            </li>
+        <ul class="mt-3 space-y-2" id="renderedLibrary">
+
         </ul>
-
     </section>
 
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/data/book.js"></script>
     <script src="./assets/js/data/library.js"></script>
+    <script src="./assets/js/data/book.js"></script>
+    <script src="./assets/js/main.js"></script>
+
 </body>
+
 </html>
