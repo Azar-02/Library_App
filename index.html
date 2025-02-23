@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library App</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .input {
+                @apply px-4 py-2 rounded bg-gray-100 outline-none w-full
+            }
+        }
+    </style>
+
 </head>
-<body>
+<body class="bg-indigo-800 p-10">
+    <div class="bg-white p-5 rounded max-w-xl mx-auto">
+        <h4 class="font-semibold text-xl">Book Library</h4>
+    
+    <form name="bookForm" class="space-y-3 mt-3">
+        <input type="text" placeholder="Book Title" class="input" required>
+        <input type="text" placeholder="Book Author" class="input" required>
+        <button type="submit" class="px-3 py-1 bg-orange-500 rounded uppercase font-semibold text-sm text-white">Save</button>
+    </form>
+
+    </div>
+
     
 </body>
 </html>
